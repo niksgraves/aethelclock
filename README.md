@@ -43,13 +43,13 @@ public readonly ephemeris: Record<string, PlanetaryMetrics> = {
 
 ## Roadmap
 
-[] **Floating master crank** - replace the linear slider with a circular dial the user grabs and rotates directly, with angle-delta tracking and inertial coasting after release, so it doubles as a visible "time cursor" in the scene rather than a UI bar.
+- [ ] **Floating master crank** - replace the linear slider with a circular dial the user grabs and rotates directly, with angle-delta tracking and inertial coasting after release, so it doubles as a visible "time cursor" in the scene rather than a UI bar.
 
-[] **Moons** - nested gear trains driven off each parent planet's angle rather than the crank directly (e.g. Earth's Moon, Mars's Phobos/Deimos, the Galilean moons of Jupiter, Titan), with exaggerated orbit radii for visibility at solar system scale.
+- [ ] **Moons** - nested gear trains driven off each parent planet's angle rather than the crank directly (e.g. Earth's Moon, Mars's Phobos/Deimos, the Galilean moons of Jupiter, Titan), with exaggerated orbit radii for visibility at solar system scale.
 
-[] **Epicyclic (planetary) gearing** - layer a secondary rotating frame onto the outer planets to reproduce true apparent retrograde motion, the same way historical geared astronomical devices modeled it.
+- [ ] **Epicyclic (planetary) gearing** - layer a secondary rotating frame onto the outer planets to reproduce true apparent retrograde motion, the same way historical geared astronomical devices modeled it.
 
-[] **Eclipse/Saros cycle prediction** - a Moon gear train geared to the ~223-month Saros cycle, showing the ancient mechanism's most notable original capability.
+- [ ] **Eclipse/Saros cycle prediction** - a Moon gear train geared to the ~223-month Saros cycle, showing the ancient mechanism's most notable original capability.
 
 ## Tech stack
 
