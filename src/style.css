@@ -294,3 +294,24 @@ code {
     border-right-color: var(--border);
   }
 }
+
+/* Keep everything from the previous step, but update/add these classes: */
+
+.telemetry-grid {
+  margin-top: 12px;
+  font-family: monospace;
+  font-size: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  text-align: left;
+  border-top: 1px solid #45f3ff22;
+  padding-top: 12px;
+}
+
+.telemetry-col {
+  background: #0b0c10;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #45f3ff11;
+}
