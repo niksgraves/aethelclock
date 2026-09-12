@@ -50,4 +50,36 @@ function renderSystem() {
     ctxMech!.lineWidth = 2;
     ctxMech!.stroke();
   });
+
+  ctxCos!.clearRect(0, 0, 400, 400);
+  const midX = 200, midY = 200;
+
+  ctxCos!.beginPath();
+  ctxCos!.arc(midX, midY, 8, 0, 2 * Math.PI);
+  ctxCos!.fillStyle = '#FFD700';
+  ctxCos!.fill();
+
+  systemState.forEach((p) => {
+    const config = engine.ephemeris[p.planetName];
+
+    ctxCos!.beginPath();
+    for (let a = 0; a <= 360; a += 2) {
+      const rRad = a * (Math.PI / 180);
+      const r = (config.radius * (1 - Math.pow(config.eccentricity, 2))) / (1 + config.eccentricity * Math.cos(rRad));
+      
+      ctxCos!.lineTo(midX + r * Math.cos(rRad), midY + r * Math.sin(rRad));
+    }
+    ctxCos!.strokeStyle = 'rgba(102, 252, 241, 0.08)';
+    ctxCos!.lineWidth = 1;
+    ctxCos!.stroke();
+
+    ctxCos!.beginPath();
+    ctxCos!.arc(midX + p.coord.x, midY + p.coord.y, 5, 0, 2 * Math.PI);
+    ctxCos!.fillStyle = p.color;
+    ctxCos!.fill();
+  })
 }
+
+crankSlider.addEventListener('input', renderSystem);
+
+renderSystem;
