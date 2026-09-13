@@ -34,7 +34,7 @@ function pointerAngle(e: PointerEvent) {
 	const { cx, cy } = crankCenter();
 	const x = e.clientX - rect.left - cx;
 	const y = e.clientY - rect.top - cy;
-	return Math.atan2(x, y);
+	return Math.atan2(y, x);
 }
 
 function shortestAngleDelta(from: number, to: number) {
@@ -102,7 +102,7 @@ function drawCrank() {
 	if (!ctxCrank) return;
 	const { cx, cy } = crankCenter();
 	const r = Math.min(cx, cy) - 10;
-	const visualRotation = -rotation;
+	const visualRotation = rotation; // lazy fix
 
 	ctxCrank.clearRect(0, 0, crankCanvas.width, crankCanvas.height);
 
@@ -212,6 +212,8 @@ function renderSystem() {
 
 	drawCrank();
 }
+
+renderSystem;
 
 crankCanvas.addEventListener('input', renderSystem);
 
