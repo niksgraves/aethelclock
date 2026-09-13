@@ -1,6 +1,6 @@
 :root {
 	--text: #6b6375;
-	--text-h: #08060d;
+	--text-h: #aaa6b4;
 	--bg: #fff;
 	--border: #e5e4e7;
 	--code-bg: #f4f3ec;
@@ -336,6 +336,11 @@ body {
 	background-color: #0a0e12;
 	/* or whatever dark tone fits the mechanism's palette */
 	margin: 0;
+}
+
+.flex-container {
+	display: flex;
+	gap: 15px;
 }
 
 #mechanicsCanvas,
