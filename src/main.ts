@@ -102,6 +102,7 @@ function drawCrank() {
 	if (!ctxCrank) return;
 	const { cx, cy } = crankCenter();
 	const r = Math.min(cx, cy) - 10;
+	const visualRotation = -rotation;
 
 	ctxCrank.clearRect(0, 0, crankCanvas.width, crankCanvas.height);
 
@@ -113,7 +114,7 @@ function drawCrank() {
 
 	const teeth = 24;
 	for (let i = 0; i < teeth; i++) {
-		const a = rotation + (i / teeth) * 2 * Math.PI;
+		const a = visualRotation + (i / teeth) * 2 * Math.PI;
 		const x1 = cx + Math.cos(a) * (r - 4);
 		const y1 = cy + Math.sin(a) * (r - 4);
 		const x2 = cx + Math.cos(a) * (r + 4);
@@ -129,7 +130,7 @@ function drawCrank() {
 	// handle indicator, points at current rotation
 	ctxCrank.beginPath();
 	ctxCrank.moveTo(cx, cy);
-	ctxCrank.lineTo(cx + Math.cos(rotation) * (r - 15), cy + Math.sin(rotation) * (r - 15));
+	ctxCrank.lineTo(cx + Math.cos(visualRotation) * (r - 15), cy + Math.sin(visualRotation) * (r - 15));
 	ctxCrank.strokeStyle = '#FFD700';
 	ctxCrank.lineWidth = 3;
 	ctxCrank.stroke();
