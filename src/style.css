@@ -331,3 +331,15 @@ code {
 #crankWheel.grabbing {
 	cursor: grabbing;
 }
+
+body {
+	background-color: #0a0e12;
+	/* or whatever dark tone fits the mechanism's palette */
+	margin: 0;
+}
+
+#mechanicsCanvas,
+#cosmosCanvas {
+	background-color: #12181f;
+	/* slightly lighter than the page, so the canvases read as panels */
+}

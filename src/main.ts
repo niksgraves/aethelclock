@@ -213,8 +213,6 @@ function renderSystem() {
 	drawCrank();
 }
 
-renderSystem;
-
 crankCanvas.addEventListener('input', renderSystem);
 
-renderSystem;
+renderSystem();
