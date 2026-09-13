@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aethelclock Architecture</title>
-  </head>
-  <body>
-    <div id="app">
-      <header>
-        <h1>AETHELCLOCK</h1>
-        <p style="color: #45f3ff; margin: 0; letter-spacing: 0.1rem;">COMPLETE CELESTIAL MECHANICAL ENGINE</p>
-      </header>
-      <main class="viewport-grid">
-        <div class="canvas-card">
-          <h2>Multi-Gear Mechanical Core</h2>
-          <canvas id="mechanicsCanvas" width="400" height="400"></canvas>
-          <div id="telemetryPanel" class="telemetry-grid"></div>
-        </div>
-        <div class="canvas-card">
-          <h2>Solar System Projections</h2>
-          <canvas id="cosmosCanvas" width="400" height="400"></canvas>
-        </div>
-      </main>
 
-      <div class="crank-container">
-        <label for="crankSlider">Master Input Crank (Time Advancement / Earth Days):</label>
-        <input type="range" id="crankSlider" min="0" max="365" value="0" step="0.5" />
-      </div>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Aethelclock Architecture</title>
+</head>
+
+<body>
+	<div id="app">
+		<header>
+			<h1>AETHELCLOCK</h1>
+			<p style="color: #45f3ff; margin: 0; letter-spacing: 0.1rem;">COMPLETE CELESTIAL MECHANICAL ENGINE</p>
+		</header>
+		<main class="viewport-grid">
+			<div class="canvas-card">
+				<h2>Multi-Gear Mechanical Core</h2>
+				<canvas id="mechanicsCanvas" width="400" height="400"></canvas>
+				<div id="telemetryPanel" class="telemetry-grid"></div>
+			</div>
+			<div class="canvas-card">
+				<h2>Solar System Projections</h2>
+				<canvas id="cosmosCanvas" width="400" height="400"></canvas>
+			</div>
+		</main>
+
+		<div class="crank-container">
+			<label for="crankSlider">Master Input Crank (Time Advancement / Earth Days):</label>
+			<canvas id="crankWheel" width="140" height="140"></canvas>
+		</div>
+	</div>
+	<script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
-

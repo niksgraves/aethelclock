@@ -1,3 +1,4 @@
+// Template for the planet data
 export interface PlanetaryMetrics {
     radius: number;
     period: number;
@@ -5,6 +6,7 @@ export interface PlanetaryMetrics {
     color: string;
 }
 
+// This is to track how the planets move over time
 export interface PlanetState {
     planetName: string;
     gearTeeth: number;
