@@ -208,6 +208,8 @@ function renderSystem() {
 		ctxCos!.fillStyle = p.color;
 		ctxCos!.fill(); // 👀
 	})
+
+	drawCrank();
 }
 
 crankCanvas.addEventListener('input', renderSystem);

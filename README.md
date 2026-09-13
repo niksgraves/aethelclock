@@ -43,7 +43,7 @@ public readonly ephemeris: Record<string, PlanetaryMetrics> = {
 
 ## Roadmap
 
-- [ ] **Floating master crank** - replace the linear slider with a circular dial the user grabs and rotates directly, with angle-delta tracking and inertial coasting after release, so it doubles as a visible "time cursor" in the scene rather than a UI bar.
+- [x] **Floating master crank** - replace the linear slider with a circular dial the user grabs and rotates directly, with angle-delta tracking and inertial coasting after release, so it doubles as a visible "time cursor" in the scene rather than a UI bar.
 
 - [ ] **Moons** - nested gear trains driven off each parent planet's angle rather than the crank directly (e.g. Earth's Moon, Mars's Phobos/Deimos, the Galilean moons of Jupiter, Titan), with exaggerated orbit radii for visibility at solar system scale.
 
