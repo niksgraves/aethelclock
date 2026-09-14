@@ -161,7 +161,7 @@ function renderSystem() {
 	ctxMech!.arc(cx, cy, 25, 0, 2 * Math.PI);
 	ctxMech!.strokeStyle = '#45f3ff';
 	ctxMech!.lineWidth = 2;
-	ctxMech!.stroke(); // ayoooooo 👀👀👀
+	ctxMech!.stroke();
 
 	systemState.forEach((p, idx) => {
 		const mechanicalStackRadius = 45 + (idx * 30);
@@ -171,7 +171,7 @@ function renderSystem() {
 		ctxMech!.arc(cx, cy, mechanicalStackRadius, 0, 2 * Math.PI);
 		ctxMech!.strokeStyle = 'rgba(197, 198, 199, 0.15)';
 		ctxMech!.lineWidth = 1;
-		ctxMech!.stroke(); // chillllll 👀👀
+		ctxMech!.stroke();
 
 		const outRad = p.outputAngle * (Math.PI / 180);
 		ctxMech!.beginPath();
@@ -179,7 +179,7 @@ function renderSystem() {
 		ctxMech!.lineTo(cx + (mechanicalStackRadius + offsetDistance) * Math.cos(outRad), cy + (mechanicalStackRadius + offsetDistance) * Math.sin(outRad));
 		ctxMech!.strokeStyle = p.color;
 		ctxMech!.lineWidth = 2;
-		ctxMech!.stroke(); // 👀
+		ctxMech!.stroke();
 	});
 
 	ctxCos!.clearRect(0, 0, 400, 400);

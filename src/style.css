@@ -302,8 +302,6 @@ code {
 	}
 }
 
-/* Keep everything from the previous step, but update/add these classes: */
-
 .telemetry-grid {
 	margin-top: 12px;
 	font-family: monospace;
@@ -326,6 +324,11 @@ code {
 #crankWheel {
 	cursor: grab;
 	touch-action: none;
+	transition: filter 0.2s ease;
+}
+
+#crankWheel:hover {
+	filter: drop-shadow(0 0 5px #45f3ff33);
 }
 
 #crankWheel.grabbing {
@@ -334,18 +337,20 @@ code {
 
 body {
 	background-color: #0a0e12;
-	/* or whatever dark tone fits the mechanism's palette */
 	margin: 0;
 }
 
 .flex-container {
 	display: flex;
 	justify-content: center;
+	align-items: flex-start;
 	gap: 15px;
 }
 
 #mechanicsCanvas,
 #cosmosCanvas {
 	background-color: #12181f;
-	/* slightly lighter than the page, so the canvases read as panels */
+	border: 1px solid #252c34;
+	border-radius: 4px;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
